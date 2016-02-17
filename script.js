@@ -1,18 +1,17 @@
 //First Prompt to Pick a Number>Character
+
 startGame();
 
 function startGame(){
   var start_number = prompt("Good morrow, my fair midsummer adventurer. Please pick a number 1 through 4 (i.e. 1, 2, 3, or 4):");
-  whileLoop(start_number);
-}
-
-function whileLoop(start_number){
   var start_integer = parseInt(start_number);
-  while (start_integer === 0 || start_integer >= 5) {
-    startGame();
+  while (start_integer == 0 || start_integer >= 5) {
+    console.log("hey");
+    start_number = prompt("Good morrow, my fair midsummer adventurer. Please pick a number 1 through 4 (i.e. 1, 2, 3, or 4):");
+    start_integer = start_number;
   }
-    playGame(start_number);
-  }
+  playGame(start_number);
+}
 
 //1->Hermia
 function playGame (start_number) {
